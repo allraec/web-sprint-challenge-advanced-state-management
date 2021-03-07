@@ -16,6 +16,7 @@ const AddForm = (props) => {
         });
     }
 
+    // used actions with conditions if form is missing/empty and adds smurf if filled completely
     const handleSubmit = e => {
         e.preventDefault();
         if (state.name === "" || state.position === "" || state.nickname === "") {
@@ -52,6 +53,8 @@ const AddForm = (props) => {
         </form>
     </section>);
 }
+
+// connects error state and actions to component
 
 const mapStateToProps = (state) => {
     return{

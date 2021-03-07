@@ -4,12 +4,15 @@ import { connect } from 'react-redux';
 
 
  const SmurfList = (props)=> {
+
+    // static isLoading is replace with state loading variable
     if (props.isLoading) {
         return <h1>Loading...</h1>;
     }
 
     return(<div className="listContainer">
         {
+            // Iterates through smurfs and returns smurf data card
             props.smurfs.map((smurf) => {
                 return(
                     <Smurf smurf={smurf}/>
@@ -19,6 +22,7 @@ import { connect } from 'react-redux';
     </div>);
 }
 
+// connects smurfs and loading variable to the component
 const mapStateToProps = (state) => {
     return{
         smurfs: state.smurfs,

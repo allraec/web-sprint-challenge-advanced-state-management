@@ -10,6 +10,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css";
 
 class App extends Component {
+
+  // function called when component is mounted
   componentDidMount(){
     this.props.fetchSmurfs();
   }
@@ -27,6 +29,7 @@ class App extends Component {
   }
 }
 
+// fetch smurf action connected to component
 const mapDispatchToProps = {fetchSmurfs}
 export default connect(null, mapDispatchToProps)(App);
 

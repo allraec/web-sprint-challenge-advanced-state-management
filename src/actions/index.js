@@ -11,6 +11,7 @@ export const FETCH_FAIL = "FETCH_FAIL";
 export const ADD_SMURF = "ADD_SMURF";
 export const ADD_ERROR = "ADD_ERROR";
 
+// action creator for adding smurf
 export const addSmurf = (smurf) => {
     return{
         type: ADD_SMURF,
@@ -18,6 +19,7 @@ export const addSmurf = (smurf) => {
     }
 }
 
+// action creator for setting error
 export const setError = (error) => {
     return{
         type: ADD_ERROR,
@@ -25,6 +27,7 @@ export const setError = (error) => {
     }
 }
 
+// thunk action that dispatches reducer cases when fetching API call starts and returns data when success or returns error when fails
 export const fetchSmurfs = () => (dispatch) => {
     dispatch({type: FETCH_START});
 

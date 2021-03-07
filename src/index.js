@@ -1,3 +1,4 @@
+// Imported necessary files and dependency
 import React from "react";
 import ReactDOM from "react-dom";
 import { applyMiddleware, createStore } from 'redux';
@@ -10,6 +11,7 @@ import reducer from './reducers/index';
 import "./index.css";
 import App from "./App";
 
+// Store created and reducer called and middleware applied with thunk
 const store = createStore(reducer, applyMiddleware(logger, thunk));
 
 const { worker } = require('./mocks/browser');
@@ -17,6 +19,7 @@ worker.start();
 
 const rootElement = document.getElementById("root");
 
+// Store provided.
 ReactDOM.render(
     <Provider store={store}>
         <App />

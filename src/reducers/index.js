@@ -1,10 +1,12 @@
 
+// Add in initial state 
 export const initialState = {
     smurfs: [],
     isLoading: false,
     error: ""
 }
 
+// Reducer pattern
 const reducer = (state = initialState, action)=>{
     switch(action.type){
         case("FETCH_START"):
