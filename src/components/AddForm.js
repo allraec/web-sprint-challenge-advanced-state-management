@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { addSmurf, setError } from '../actions/index'
 import { connect } from 'react-redux';
-import axios from 'axios';
 const AddForm = (props) => {
     const [state, setState] = useState({
         name:"",
@@ -26,8 +25,6 @@ const AddForm = (props) => {
             props.addSmurf(state);
         }
     }
-
-    const errorMessage = "";
 
     return(<section>
         <h2>Add Smurf</h2>
